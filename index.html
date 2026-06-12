@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,104 +9,87 @@
 <style>
 
 *{
+box-sizing:border-box;
 margin:0;
 padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
 background:#fff;
+padding-bottom:100px;
 color:#111;
-padding-bottom:110px;
 }
 
 
 /* NAVBAR */
 
 .navbar{
-
 height:80px;
-background:#fff;
 position:sticky;
 top:0;
 z-index:99;
 
+background:white;
+
 display:flex;
 align-items:center;
 justify-content:space-between;
 
-padding:0 25px;
+padding:0 22px;
 
-box-shadow:0 4px 20px rgba(0,0,0,.12);
-
+box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
 
 .nav-left{
-
-font-size:30px;
+font-size:32px;
 display:flex;
-gap:20px;
-cursor:pointer;
-
+gap:18px;
 }
 
 
 .logo{
-
-font-size:52px;
+font-size:48px;
 font-weight:900;
 letter-spacing:-4px;
-
 }
 
 
 
-/* CONTAINER */
-
+/* CONTENT */
 
 .container{
-
 max-width:1100px;
 margin:auto;
 padding:25px;
-
 }
 
 
 .title{
-
 display:flex;
 justify-content:space-between;
-align-items:center;
 
-font-size:30px;
+font-size:28px;
 font-weight:800;
 
 margin-bottom:20px;
-
 }
 
 
-.denah{
-text-decoration:underline;
-}
-
-
-
-/* BOX */
 
 
 .box{
 
 border:1px solid #ddd;
+
 border-radius:25px;
 
 overflow:hidden;
+
 margin-bottom:25px;
 
-box-shadow:0 10px 30px rgba(0,0,0,.06);
+box-shadow:0 10px 30px rgba(0,0,0,.07);
 
 }
 
@@ -131,6 +113,7 @@ cursor:pointer;
 .content{
 
 display:none;
+
 padding:25px;
 
 line-height:1.7;
@@ -139,42 +122,39 @@ line-height:1.7;
 
 
 
-.box.active .content{
-
+.active .content{
 display:block;
-
 }
 
 
 
-
-/* TICKET */
+/* CARD */
 
 
 .ticket{
 
 border:1px solid #ddd;
-border-radius:20px;
+
+border-radius:22px;
 
 padding:22px;
+
 margin-bottom:20px;
 
 }
 
 
+
 .ticket h2{
-
 font-size:22px;
-
 }
 
 
 .ticket p{
-
 color:#777;
 margin:10px 0;
-
 }
+
 
 
 .price{
@@ -185,27 +165,31 @@ font-weight:bold;
 }
 
 
+
 .sale{
 
 display:inline-block;
 
 background:#ffe4ec;
+
 color:#e40046;
 
 padding:8px 18px;
 
 border-radius:30px;
 
-font-weight:bold;
-
 margin-top:10px;
 
+font-weight:bold;
+
 }
+
 
 
 .counter{
 
 display:flex;
+
 gap:15px;
 
 align-items:center;
@@ -215,16 +199,18 @@ margin-top:15px;
 }
 
 
-
 .counter button{
 
 width:45px;
+
 height:45px;
 
 border:none;
+
 border-radius:15px;
 
 background:#111;
+
 color:white;
 
 font-size:25px;
@@ -234,32 +220,36 @@ font-size:25px;
 
 
 
-/* FLOAT BUTTON */
+/* BUY BUTTON */
 
 
 .buy{
 
 position:fixed;
 
-right:20px;
-bottom:25px;
+bottom:18px;
 
-background:#e40046;
-color:white;
+left:20px;
+
+right:20px;
+
+height:60px;
 
 border:none;
 
-padding:18px 28px;
+border-radius:20px;
 
-border-radius:50px;
+background:#111;
+
+color:white;
+
+font-size:18px;
 
 font-weight:bold;
 
-font-size:16px;
+animation:float 1.5s infinite;
 
 z-index:100;
-
-animation:float 1.5s infinite;
 
 }
 
@@ -268,7 +258,7 @@ animation:float 1.5s infinite;
 @keyframes float{
 
 50%{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
 }
@@ -278,9 +268,10 @@ transform:translateY(-10px);
 /* FOOTER */
 
 
-.footer{
+footer{
 
 background:#111;
+
 color:white;
 
 text-align:center;
@@ -291,71 +282,38 @@ padding:70px 20px;
 
 
 
-.footer img{
+footer img{
 
 max-width:260px;
-max-height:200px;
 
 }
 
 
 
-.footer h1{
+footer h1{
 
-font-size:50px;
-margin:25px 0;
+font-size:45px;
 
-}
-
-
-
-.footer p{
-
-font-size:20px;
+margin:20px;
 
 }
 
 
-
-
-/* MOBILE */
 
 
 @media(max-width:600px){
 
-
 .logo{
-font-size:40px;
+font-size:38px;
 }
-
 
 .container{
-
 padding:15px;
-
 }
-
 
 .title{
-
 font-size:22px;
-
 }
-
-
-.box-title{
-
-font-size:20px;
-
-}
-
-
-.ticket h2{
-
-font-size:18px;
-
-}
-
 
 }
 
@@ -368,16 +326,12 @@ font-size:18px;
 
 
 
-<!-- NAVBAR -->
-
 <div class="navbar">
 
 
 <div class="nav-left">
 
-☰
-
-⌕
+☰ 🔍
 
 </div>
 
@@ -395,41 +349,34 @@ JOYTIX
 
 
 
-<div class="container">
 
+<div class="container">
 
 
 <div class="title">
 
-<span>
 CATEGORY TIKET
-</span>
 
-<span class="denah">
-Denah Acara
+<span>
+<u>Denah Acara</u>
 </span>
-
 
 </div>
 
 
 
 
-
-<!-- CATEGORY -->
-
-
 <div class="box active">
 
 
-<div class="box-title"
-onclick="toggleBox(this)">
+<div class="box-title" onclick="toggle(this)">
 
 Kategori Tiket
 
 <span>⌃</span>
 
 </div>
+
 
 
 <div class="content">
@@ -439,9 +386,7 @@ Kategori Tiket
 <div class="ticket">
 
 
-<h2>
-EARLY BIRD - FESTIVAL
-</h2>
+<h2>EARLY BIRD - FESTIVAL</h2>
 
 
 <p>
@@ -462,17 +407,25 @@ ON SALE
 
 <div class="counter">
 
-<button>-</button>
+<button onclick="minus('f')">
+-
+</button>
 
-<b>1</b>
 
-<button>+</button>
+<b id="f">
+1
+</b>
 
+
+<button onclick="plus('f')">
++
+</button>
 
 </div>
 
 
 </div>
+
 
 
 
@@ -481,9 +434,7 @@ ON SALE
 <div class="ticket">
 
 
-<h2>
-EARLY BIRD - VIP
-</h2>
+<h2>EARLY BIRD - VIP</h2>
 
 
 <p>
@@ -504,11 +455,22 @@ ON SALE
 
 <div class="counter">
 
-<button>-</button>
+<button onclick="minus('v')">
+-
+</button>
 
-<b>1</b>
 
-<button>+</button>
+<b id="v">
+1
+</b>
+
+
+<button onclick="plus('v')">
++
+</button>
+
+</div>
+
 
 </div>
 
@@ -517,25 +479,17 @@ ON SALE
 </div>
 
 
-
-</div>
-
 </div>
 
 
 
 
-
-
-
-<!-- DESKRIPSI -->
 
 
 <div class="box active">
 
 
-<div class="box-title"
-onclick="toggleBox(this)">
+<div class="box-title" onclick="toggle(this)">
 
 Deskripsi Acara
 
@@ -547,25 +501,23 @@ Deskripsi Acara
 <div class="content">
 
 
-Sekarang persiapkan dirimu untuk DIALOG CINTA FEST VOL.5
+Sekarang persiapkan dirimu untuk DIALOG CINTA FEST VOL.5.
 
 
 <br><br>
-
 
 Festival ini akan digelar dengan menghadirkan deretan bintang tamu yang luar biasa.
 
-
 <br><br>
 
-
 NDX AKA
+
 <br>
+
 More to come
 
 
 <br><br>
-
 
 Tempat : Kota Blitar
 
@@ -576,16 +528,8 @@ Tanggal : 28 Agustus 2026
 
 <br><br>
 
-
-Ayo, jangan lewatkan konser terbesar di Kota Blitar dan jadilah bagian dari keseruan Konser DIALOG CINTA FEST VOL.5 bersama teman, pasangan, dan keluarga!
-
-
-<br><br>
-
-
 Segera amankan tiketmu hanya di Joytix.id sebelum kehabisan!
 
-
 </div>
 
 
@@ -595,85 +539,61 @@ Segera amankan tiketmu hanya di Joytix.id sebelum kehabisan!
 
 
 
-
-
-<!-- SYARAT -->
 
 
 <div class="box active">
 
 
-<div class="box-title"
-onclick="toggleBox(this)">
-
+<div class="box-title" onclick="toggle(this)">
 
 Syarat & Ketentuan
 
 <span>⌃</span>
 
-
 </div>
-
 
 
 <div class="content">
 
 
-<b>
 SYARAT DAN KETENTUAN TIKET:
-</b>
 
 
 <br><br>
 
 
-1. Tiket dapat dibeli melalui laman joytix.id
+1. Tiket melalui joytix.id
 
 <br>
 
-2. Pembelian tiket selain melalui joytix.id bukan tanggung jawab promotor
+2. Pembelian diluar joytix bukan tanggung jawab promotor
 
 <br>
 
-3. Anak dibawah 5 tahun wajib didampingi
+3. Tiket tidak dapat dikembalikan
 
 <br>
 
-4. Anak mulai 5 tahun wajib membeli tiket
+4. Harga sudah termasuk pajak
 
 <br>
 
-5. Harga sudah termasuk pajak
+5. QR Code hanya satu kali scan
 
 <br>
 
-6. Data pembelian wajib sesuai identitas
-
-<br>
-
-7. Tiket tidak dapat dikembalikan
-
-<br>
-
-8. QR Code hanya dapat digunakan satu kali
-
-<br>
-
-9. Gelang tiket digunakan untuk Single Entry
-
-<br>
-
-10. Surat kuasa mengikuti aturan penyelenggara
+6. Gelang tiket Single Entry
 
 
 </div>
+
 
 </div>
 
 
 
-</div>
 
+</div>
 
 
 
@@ -681,7 +601,7 @@ SYARAT DAN KETENTUAN TIKET:
 
 
 <button class="buy"
-onclick="goBuy()">
+onclick="location.href='from.html'">
 
 BELI SEKARANG
 
@@ -690,10 +610,7 @@ BELI SEKARANG
 
 
 
-
-
-
-<footer class="footer">
+<footer>
 
 
 <img src="logo-saya.png">
@@ -723,24 +640,44 @@ Whatsapp Admin : 0882-1091-7572
 <script>
 
 
-function toggleBox(el){
+function toggle(e){
 
-el.parentElement.classList.toggle("active");
+e.parentElement.classList.toggle("active");
 
 }
 
 
 
-function goBuy(){
+let data={
+f:1,
+v:1
+}
 
-window.location.href="from.html";
+
+function plus(id){
+
+if(data[id]<5){
+data[id]++;
+}
+
+document.getElementById(id).innerHTML=data[id];
+
+}
+
+
+
+function minus(id){
+
+if(data[id]>1){
+data[id]--;
+}
+
+document.getElementById(id).innerHTML=data[id];
 
 }
 
 
 </script>
-
-
 
 
 </body>
