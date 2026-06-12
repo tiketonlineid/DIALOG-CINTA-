@@ -417,6 +417,57 @@ width:100%;
 
 }
 
+
+.extra-accordion{
+background:#fff;
+border-radius:24px;
+margin:20px 0;
+overflow:hidden;
+border:1px solid #e5e7eb;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.extra-title{
+padding:24px;
+font-size:22px;
+font-weight:700;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.extra-content{
+display:none;
+padding:0 24px 24px;
+color:#666;
+line-height:1.7;
+}
+
+.extra-accordion.active .extra-content{
+display:block;
+}
+
+.section-head{
+max-width:1100px;
+margin:auto;
+padding:25px;
+display:flex;
+justify-content:space-between;
+font-size:30px;
+font-weight:800;
+}
+
+.denah{
+text-decoration:underline;
+font-size:20px;
+}
+
+@media(max-width:768px){
+.section-head{
+font-size:24px;
+padding:16px;
+}
+}
 </style>
 </head>
 
@@ -486,6 +537,33 @@ Festival Musik & Hiburan
 <!-- CONTENT -->
 
 <div class="container">
+
+<div class="section-head">
+<div>🎫 Kategori Tiket</div>
+<div class="denah">Denah Acara</div>
+</div>
+
+<div class="extra-accordion active">
+<div class="extra-title" onclick="this.parentElement.classList.toggle('active')">
+Deskripsi Acara <span>⌄</span>
+</div>
+<div class="extra-content">
+Nikmati pengalaman event terbaik bersama kami.
+</div>
+</div>
+
+<div class="extra-accordion active">
+<div class="extra-title" onclick="this.parentElement.classList.toggle('active')">
+Syarat dan Ketentuan <span>⌄</span>
+</div>
+<div class="extra-content">
+<ul>
+<li>Tiket tidak dapat dikembalikan.</li>
+<li>Wajib membawa tiket saat masuk.</li>
+<li>Patuhi aturan penyelenggara.</li>
+</ul>
+</div>
+</div>
 
 <div class="section-title">
 🎫 Kategori Tiket
