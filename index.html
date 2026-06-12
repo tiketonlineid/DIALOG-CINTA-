@@ -4,20 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JOYTIX Ticket</title>
+<title>Joytix - Category Tiket</title>
 
 <style>
 
 *{
 box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
+margin:0;
 background:#fff;
-padding-bottom:100px;
 color:#111;
 }
 
@@ -25,34 +23,47 @@ color:#111;
 /* NAVBAR */
 
 .navbar{
-height:80px;
 position:sticky;
 top:0;
 z-index:99;
-
+height:85px;
 background:white;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
-padding:0 22px;
-
-box-shadow:0 4px 20px rgba(0,0,0,.15);
-}
-
-
-.nav-left{
-font-size:32px;
-display:flex;
-gap:18px;
+padding:0 25px;
+box-shadow:0 5px 20px #0002;
 }
 
 
 .logo{
-font-size:48px;
+font-size:55px;
 font-weight:900;
 letter-spacing:-4px;
+}
+
+
+.nav-btn{
+display:flex;
+gap:18px;
+font-size:34px;
+cursor:pointer;
+}
+
+
+
+/* HERO */
+
+.hero{
+height:230px;
+background:
+linear-gradient(135deg,#111,#444);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:32px;
+font-weight:bold;
 }
 
 
@@ -60,7 +71,7 @@ letter-spacing:-4px;
 /* CONTENT */
 
 .container{
-max-width:1100px;
+max-width:950px;
 margin:auto;
 padding:25px;
 }
@@ -69,255 +80,216 @@ padding:25px;
 .title{
 display:flex;
 justify-content:space-between;
-
-font-size:28px;
-font-weight:800;
-
-margin-bottom:20px;
+font-size:38px;
+font-weight:700;
+margin-bottom:25px;
 }
-
 
 
 
 .box{
-
 border:1px solid #ddd;
-
 border-radius:25px;
-
-overflow:hidden;
-
-margin-bottom:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.07);
-
+padding:25px;
+margin-bottom:20px;
+box-shadow:0 8px 25px #00000010;
 }
 
 
-.box-title{
-
-padding:25px;
-
-font-size:25px;
-font-weight:bold;
-
+.header{
 display:flex;
 justify-content:space-between;
+font-size:25px;
+font-weight:bold;
+cursor:pointer;
+}
 
+
+
+.content{
+margin-top:20px;
+animation:show .3s;
+}
+
+
+@keyframes show{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+}
+}
+
+
+
+
+/* TICKET */
+
+.ticket{
+border:1px solid #ddd;
+border-radius:20px;
+padding:20px;
+margin-bottom:18px;
+}
+
+
+
+.ticket h2{
+margin:0;
+}
+
+
+.desc{
+color:#777;
+font-size:18px;
+}
+
+
+
+.price{
+font-size:25px;
+font-weight:bold;
+margin:15px 0;
+}
+
+
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+
+.sale{
+background:#16c96a;
+color:white;
+padding:10px 18px;
+border-radius:30px;
+font-weight:bold;
+}
+
+
+
+.counter button{
+
+border:none;
+width:40px;
+height:40px;
+border-radius:12px;
+font-size:22px;
 cursor:pointer;
 
 }
 
 
 
-.content{
-
-display:none;
-
-padding:25px;
-
-line-height:1.7;
-
-}
-
-
-
-.active .content{
-display:block;
-}
-
-
-
-/* CARD */
-
-
-.ticket{
-
-border:1px solid #ddd;
-
-border-radius:22px;
-
-padding:22px;
-
-margin-bottom:20px;
-
-}
-
-
-
-.ticket h2{
-font-size:22px;
-}
-
-
-.ticket p{
-color:#777;
-margin:10px 0;
-}
-
-
-
-.price{
-
-font-size:28px;
+.counter span{
+margin:0 15px;
 font-weight:bold;
-
 }
 
 
-
-.sale{
-
-display:inline-block;
-
-background:#ffe4ec;
-
-color:#e40046;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-margin-top:10px;
-
-font-weight:bold;
-
-}
-
-
-
-.counter{
-
-display:flex;
-
-gap:15px;
-
-align-items:center;
-
-margin-top:15px;
-
-}
-
-
-.counter button{
-
-width:45px;
-
-height:45px;
-
-border:none;
-
-border-radius:15px;
-
-background:#111;
-
-color:white;
-
-font-size:25px;
-
-}
-
-
-
-
-/* BUY BUTTON */
 
 
 .buy{
-
-position:fixed;
-
-bottom:18px;
-
-left:20px;
-
-right:20px;
-
-height:60px;
-
-border:none;
-
-border-radius:20px;
-
+width:100%;
+margin-top:20px;
 background:#111;
-
 color:white;
-
+padding:15px;
+border:none;
+border-radius:18px;
 font-size:18px;
-
-font-weight:bold;
-
-animation:float 1.5s infinite;
-
-z-index:100;
-
-}
-
-
-
-@keyframes float{
-
-50%{
-transform:translateY(-8px);
-}
-
+cursor:pointer;
 }
 
 
 
 /* FOOTER */
 
+.footer{
 
-footer{
-
-background:#111;
-
+background:#171717;
 color:white;
-
 text-align:center;
-
 padding:70px 20px;
 
 }
 
 
+.footer-logo{
+font-size:65px;
+font-weight:900;
+}
 
-footer img{
 
-max-width:260px;
-
+.footer p{
+font-size:22px;
 }
 
 
 
-footer h1{
 
-font-size:45px;
+/* FLOAT BUTTON */
 
-margin:20px;
+.up{
+
+position:fixed;
+right:20px;
+bottom:25px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:#111;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:float 2s infinite;
+cursor:pointer;
 
 }
 
+
+@keyframes float{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
 
 
 
 @media(max-width:600px){
 
 .logo{
-font-size:38px;
+font-size:42px;
+}
+
+.title{
+font-size:28px;
+}
+
+.hero{
+height:170px;
+font-size:24px;
 }
 
 .container{
 padding:15px;
 }
 
-.title{
-font-size:22px;
 }
 
-}
+
 
 </style>
+
 
 </head>
 
@@ -328,23 +300,25 @@ font-size:22px;
 
 <div class="navbar">
 
-
-<div class="nav-left">
-
-☰ 🔍
-
-</div>
-
-
 <div class="logo">
+joytix.
+</div>
 
-JOYTIX
 
+<div class="nav-btn">
+⌕ ☰
 </div>
 
 
 </div>
 
+
+
+
+
+<div class="hero">
+DIALOG CINTA FEST VOL.5
+</div>
 
 
 
@@ -353,25 +327,25 @@ JOYTIX
 <div class="container">
 
 
+
 <div class="title">
 
-CATEGORY TIKET
+<span>Kategori Tiket</span>
 
-<span>
 <u>Denah Acara</u>
-</span>
 
 </div>
 
 
 
 
-<div class="box active">
+
+<div class="box">
 
 
-<div class="box-title" onclick="toggle(this)">
+<div class="header" onclick="toggle('kategori')">
 
-Kategori Tiket
+EARLY BIRD
 
 <span>⌃</span>
 
@@ -379,45 +353,102 @@ Kategori Tiket
 
 
 
-<div class="content">
+<div id="kategori" class="content">
+
+
+
+<div class="ticket">
+
+<h2>
+Early Bird - Festival
+</h2>
+
+<p class="desc">
+Maksimal Pembelian 5 Dalam 1 Akun
+</p>
+
+
+<div class="price">
+Rp.85.000
+</div>
+
+
+<div class="row">
+
+<span class="sale">
+ON SALE
+</span>
+
+
+
+<div class="counter">
+
+<button onclick="minus('festival')">
+-
+</button>
+
+
+<span id="festival">
+0
+</span>
+
+
+<button onclick="plus('festival')">
++
+</button>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
 
 
 
 <div class="ticket">
 
 
-<h2>EARLY BIRD - FESTIVAL</h2>
+<h2>
+Early Bird - VIP
+</h2>
 
 
-<p>
+<p class="desc">
 Maksimal Pembelian 5 Dalam 1 Akun
 </p>
 
 
 <div class="price">
-Rp 85.000
+Rp.110.000
 </div>
 
 
-<div class="sale">
+<div class="row">
+
+<span class="sale">
 ON SALE
-</div>
-
+</span>
 
 
 <div class="counter">
 
-<button onclick="minus('f')">
+<button onclick="minus('vip')">
 -
 </button>
 
 
-<b id="f">
-1
-</b>
+<span id="vip">
+0
+</span>
 
 
-<button onclick="plus('f')">
+<button onclick="plus('vip')">
 +
 </button>
 
@@ -428,56 +459,21 @@ ON SALE
 
 
 
-
-
-
-<div class="ticket">
-
-
-<h2>EARLY BIRD - VIP</h2>
-
-
-<p>
-Maksimal Pembelian 5 Dalam 1 Akun
-</p>
-
-
-<div class="price">
-Rp 110.000
-</div>
-
-
-<div class="sale">
-ON SALE
 </div>
 
 
 
-<div class="counter">
 
-<button onclick="minus('v')">
--
+
+<button class="buy" onclick="location.href='from.html'">
+
+LANJUTKAN PEMBELIAN
+
 </button>
 
 
-<b id="v">
-1
-</b>
-
-
-<button onclick="plus('v')">
-+
-</button>
 
 </div>
-
-
-</div>
-
-
-
-</div>
-
 
 </div>
 
@@ -486,36 +482,37 @@ ON SALE
 
 
 
-<div class="box active">
 
 
-<div class="box-title" onclick="toggle(this)">
+<div class="box">
+
+
+<div class="header" onclick="toggle('deskripsi')">
 
 Deskripsi Acara
 
-<span>⌃</span>
+<span>⌄</span>
 
 </div>
 
 
-<div class="content">
+
+<div id="deskripsi" class="content" style="display:none">
 
 
-Sekarang persiapkan dirimu untuk DIALOG CINTA FEST VOL.5.
-
+Sekarang persiapkan dirimu untuk
+<b>DIALOG CINTA FEST VOL.5</b>
 
 <br><br>
 
-Festival ini akan digelar dengan menghadirkan deretan bintang tamu yang luar biasa.
+Festival ini menghadirkan bintang tamu luar biasa.
 
 <br><br>
 
 NDX AKA
 
 <br>
-
 More to come
-
 
 <br><br>
 
@@ -525,100 +522,91 @@ Tempat : Kota Blitar
 
 Tanggal : 28 Agustus 2026
 
-
-<br><br>
-
-Segera amankan tiketmu hanya di Joytix.id sebelum kehabisan!
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="box active">
-
-
-<div class="box-title" onclick="toggle(this)">
-
-Syarat & Ketentuan
-
-<span>⌃</span>
-
-</div>
-
-
-<div class="content">
-
-
-SYARAT DAN KETENTUAN TIKET:
-
-
 <br><br>
 
 
-1. Tiket melalui joytix.id
+Ayo jangan lewatkan konser terbesar di Kota Blitar!
 
-<br>
+</div>
 
-2. Pembelian diluar joytix bukan tanggung jawab promotor
 
-<br>
+</div>
 
-3. Tiket tidak dapat dikembalikan
 
-<br>
+
+
+
+
+
+<div class="box">
+
+
+<div class="header" onclick="toggle('syarat')">
+
+
+Syarat dan Ketentuan
+
+
+<span>⌄</span>
+
+
+</div>
+
+
+
+<div id="syarat" class="content" style="display:none">
+
+
+1. Tiket dibeli melalui joytix.id
+
+<br><br>
+
+2. Pembelian selain joytix.id bukan tanggung jawab promotor
+
+<br><br>
+
+3. Anak usia 5 tahun wajib membeli tiket
+
+<br><br>
 
 4. Harga sudah termasuk pajak
 
-<br>
+<br><br>
 
-5. QR Code hanya satu kali scan
+5. Data wajib sesuai identitas
 
-<br>
+<br><br>
 
-6. Gelang tiket Single Entry
+6. Tiket tidak dapat dikembalikan
 
+<br><br>
 
-</div>
-
-
-</div>
-
-
-
+7. QR Code hanya dapat digunakan satu kali
 
 </div>
 
 
 
-
-
-
-<button class="buy"
-onclick="location.href='from.html'">
-
-BELI SEKARANG
-
-</button>
+</div>
 
 
 
 
-<footer>
 
 
-<img src="logo-saya.png">
+
+</div>
 
 
-<h1>
-DIALOG CINTA
-</h1>
+
+
+
+<div class="footer">
+
+
+<div class="footer-logo">
+joytix.
+</div>
 
 
 <p>
@@ -631,7 +619,18 @@ Whatsapp Admin : 0882-1091-7572
 </p>
 
 
-</footer>
+
+</div>
+
+
+
+
+
+<div class="up" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</div>
 
 
 
@@ -640,44 +639,72 @@ Whatsapp Admin : 0882-1091-7572
 <script>
 
 
-function toggle(e){
+function toggle(id){
 
-e.parentElement.classList.toggle("active");
+let x=document.getElementById(id);
+
+
+if(x.style.display==="none"){
+
+x.style.display="block";
+
+}else{
+
+x.style.display="none";
+
+}
 
 }
 
 
 
-let data={
-f:1,
-v:1
-}
 
 
 function plus(id){
 
-if(data[id]<5){
-data[id]++;
+let x=document.getElementById(id);
+
+let angka=parseInt(x.innerHTML);
+
+
+if(angka<5){
+
+angka++;
+
 }
 
-document.getElementById(id).innerHTML=data[id];
+
+x.innerHTML=angka;
+
 
 }
+
 
 
 
 function minus(id){
 
-if(data[id]>1){
-data[id]--;
+let x=document.getElementById(id);
+
+let angka=parseInt(x.innerHTML);
+
+
+if(angka>0){
+
+angka--;
+
 }
 
-document.getElementById(id).innerHTML=data[id];
+
+x.innerHTML=angka;
+
 
 }
+
 
 
 </script>
+
 
 
 </body>
